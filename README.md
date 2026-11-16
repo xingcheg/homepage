@@ -1,0 +1,61 @@
+# Xingche Guo — academic homepage
+
+**Website:** <https://xingcheg.github.io/homepage/>
+
+A static academic website with a biography, research themes, publications,
+and research code links. Built from the current Google Sites homepage, supplied
+Research and Publications HTML, and the supplied portrait.
+
+## Update the website
+
+| File | What to edit |
+| --- | --- |
+| `index.html` | Biography, research interests, photo, and contact information |
+| `research.html` | Research theme descriptions, diagrams, and related papers |
+| `publications.html` | Publication titles, authors, venues, years, and links |
+| `assets/site.css` | Shared typography, layout, navigation, and mobile styles |
+| `assets/research.css` and `research.js` | Research layout and accessible tabs |
+| `assets/publications.css` and `publications.js` | Publication layout and filters |
+| `assets/xingche-guo.jpg` | Portrait photograph |
+
+To add a publication, copy a `li.paper` into the appropriate year group in
+`publications.html`, assign unique IDs, and update its citation, links, and
+`data-search` text. Keep `data-status="published"` or `data-status="review"`.
+Counts are recalculated when the page loads. Also add the paper to its theme in
+`research.html` if appropriate.
+
+Research theme IDs support direct links, such as
+`research.html#functional-data`. Shared header and footer HTML appears in each
+page; update all pages when changing navigation.
+
+## Preview locally
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000/>. The main pages use relative asset and
+navigation links. Canonical URLs, the sitemap, and the custom 404 page target the
+published `/homepage/` path.
+
+## Deployment
+
+GitHub Pages publishes from the **main** branch, **/ (root)** directory.
+Push changes to `main` to update the website. The `.nojekyll` file disables
+Jekyll processing; there is no build step or package installation.
+
+All biography, research, and publication content remains readable without
+JavaScript. JavaScript enables the research tabs and publication filters. Print
+styles include all themes and publications. Google Fonts has system fallbacks.
+No analytics or tracking scripts are included.
+
+## Content sources
+
+- [Original homepage](https://sites.google.com/view/xingche-guo/home)
+- Supplied `research-embed.html` and `publications-embed.html`
+- Supplied portrait, preserved at its original resolution
+
+The supplied bibliography includes 8 published/forthcoming papers and 5
+manuscripts under review. The 2020 Metabolites paper and working-paper section
+remain excluded. The Google Scholar profile link is preserved; citation
+metrics are not copied or inferred.
