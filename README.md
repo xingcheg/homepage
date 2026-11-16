@@ -74,7 +74,7 @@ No analytics or tracking scripts are included.
 - [Original homepage](https://sites.google.com/view/xingche-guo/home)
 - Supplied `research-embed.html` and `publications-embed.html`
 - Supplied portrait and three group photographs, preserved at their original resolution
-- Six supplied PDF slide decks, copied unchanged; talk metadata comes from their title pages
+- Seven supplied PDF slide decks, copied unchanged; talk metadata comes from their title pages
 
 The supplied bibliography includes 8 published/forthcoming papers and 5
 manuscripts under review. The 2020 Metabolites paper and working-paper section
