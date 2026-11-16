@@ -3,17 +3,21 @@
 **Website:** <https://xingcheg.github.io/homepage/>
 
 A static academic website with a biography, research themes, publications,
-teaching, and research code links. Built from the current Google Sites homepage, supplied
+teaching, selected talks, group photos, and research code links. Built from the current Google Sites homepage, supplied
 Research and Publications HTML, and the supplied portrait.
 
 ## Update the website
 
 | File | What to edit |
 | --- | --- |
-| `index.html` | Biography, research interests, photo, and contact information |
+| `index.html` | Biography, research interests, portrait, group photo gallery, and contact information |
 | `research.html` | Research theme descriptions, diagrams, and related papers |
 | `publications.html` | Publication titles, authors, venues, years, and links |
 | `teaching.html` | Graduate and undergraduate courses, semesters, and course links |
+| `talks.html` | Selected talk titles, dates, venues, and slide links |
+| `slides/` | Original PDF slide decks linked from Selected talks |
+| `assets/talks.css` | Selected talks layout and mobile styles |
+| `assets/photos/` | Group photographs at their original resolution |
 | `assets/teaching.css` | Teaching layout and featured STAT5095 repository |
 | `assets/site.css` | Shared typography, layout, navigation, and mobile styles |
 | `assets/research.css` and `research.js` | Research layout and accessible tabs |
@@ -29,6 +33,16 @@ Counts are recalculated when the page loads. Also add the paper to its theme in
 Edit `teaching.html` to update course offerings. STAT5095 links to the public
 Statistical Generative Modeling repository; undergraduate courses link to their
 UConn descriptions.
+
+To add a talk, copy a `li.talk-row` into the appropriate year in `talks.html`,
+assign unique heading and link IDs, and add the PDF under `slides/`. Use the title,
+date, and venue shown in the slides; do not infer missing event details. Update
+the displayed file size when replacing a deck.
+
+The home page gallery is linked directly at `index.html#photos`. Add photographs
+to `assets/photos/` and update the gallery in `index.html`, including descriptive
+alt text and the original image dimensions. Each photo links to its full-size
+file; the gallery preserves the complete image without cropping.
 
 Research theme IDs support direct links, such as
 `research.html#functional-data`. Shared header and footer HTML appears in each
@@ -59,7 +73,8 @@ No analytics or tracking scripts are included.
 
 - [Original homepage](https://sites.google.com/view/xingche-guo/home)
 - Supplied `research-embed.html` and `publications-embed.html`
-- Supplied portrait, preserved at its original resolution
+- Supplied portrait and three group photographs, preserved at their original resolution
+- Six supplied PDF slide decks, copied unchanged; talk metadata comes from their title pages
 
 The supplied bibliography includes 8 published/forthcoming papers and 5
 manuscripts under review. The 2020 Metabolites paper and working-paper section

@@ -61,6 +61,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, [tabindex="0"]:focus
 .interest-columns ul { margin: 0; padding-left: 17px; color: var(--muted); font-size: .9375rem; line-height: 1.6; }
 .interest-columns li { margin-bottom: 10px; padding-left: 3px; }
 .interest-columns li::marker { color: var(--soft); }
+.group-photos { margin-top: 52px; padding-top: 30px; border-top: 1px solid var(--line); }
+.photos-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 24px; }
+.photos-heading h2 { margin: 0; font: 400 1.875rem/1.25 var(--serif); letter-spacing: -.01em; }
+.photos-heading p { margin: 0; color: var(--muted); font-size: .8125rem; }
+.photo-gallery { display: grid; grid-template-columns: 4fr 2.25fr 4fr; gap: 16px; align-items: start; }
+.photo-gallery a { display: block; border-radius: 4px; }
+.photo-gallery img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.photo-gallery a:hover { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 640px) {
+  .group-photos { margin-top: 40px; }
+  .photo-gallery { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .photo-gallery .photo-portrait { width: 100%; max-width: 340px; justify-self: center; }
+}
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; padding-top: 25px; padding-bottom: 28px; color: var(--muted); font-size: .75rem; }
 .footer-inner p { margin: 0; }
@@ -97,7 +110,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, [tabindex="0"]:focus
   .header-inner, .site-main, .footer-inner { padding-left: 20px; padding-right: 20px; }
   .header-inner { align-items: flex-start; flex-direction: column; gap: 12px; padding-top: 22px; padding-bottom: 10px; }
   .brand span { margin-top: 5px; }
-  .site-nav { width: 100%; gap: 0 clamp(10px, 3.5vw, 18px); }
+  .site-nav { width: 100%; display: grid; grid-template-columns: repeat(3, max-content); gap: 0 clamp(14px, 5vw, 24px); justify-items: start; }
   .site-nav a { padding-top: 7px; font-size: .875rem; }
   .home-actions { gap: 12px 20px; }
   .profile { display: block; max-width: 340px; }
