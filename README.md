@@ -3,7 +3,7 @@
 **Website:** <https://xingcheg.github.io/homepage/>
 
 A static academic website with a biography, research themes, publications,
-and research code links. Built from the current Google Sites homepage, supplied
+teaching, and research code links. Built from the current Google Sites homepage, supplied
 Research and Publications HTML, and the supplied portrait.
 
 ## Update the website
@@ -13,6 +13,8 @@ Research and Publications HTML, and the supplied portrait.
 | `index.html` | Biography, research interests, photo, and contact information |
 | `research.html` | Research theme descriptions, diagrams, and related papers |
 | `publications.html` | Publication titles, authors, venues, years, and links |
+| `teaching.html` | Graduate and undergraduate courses, semesters, and course links |
+| `assets/teaching.css` | Teaching layout and featured STAT5095 repository |
 | `assets/site.css` | Shared typography, layout, navigation, and mobile styles |
 | `assets/research.css` and `research.js` | Research layout and accessible tabs |
 | `assets/publications.css` and `publications.js` | Publication layout and filters |
@@ -23,6 +25,10 @@ To add a publication, copy a `li.paper` into the appropriate year group in
 `data-search` text. Keep `data-status="published"` or `data-status="review"`.
 Counts are recalculated when the page loads. Also add the paper to its theme in
 `research.html` if appropriate.
+
+Edit `teaching.html` to update course offerings. STAT5095 links to the public
+Statistical Generative Modeling repository; undergraduate courses link to their
+UConn descriptions.
 
 Research theme IDs support direct links, such as
 `research.html#functional-data`. Shared header and footer HTML appears in each
